@@ -65,14 +65,23 @@ public class Solution {
             }
         }
         
-        // Calculate excess numbers needing adjustment
-        int excess1 = count1 > count2 ? count1 - count2 : 0;
-        int excess2 = count2 > count1 ? count2 - count1 : 0;
+        // Calculate the number of operations needed
+        int operations = 0;
         
-        // Operations needed to achieve divisibility by 3
-        int operations = excess1 + excess2 + Math.abs(count1 - count2) / 3;
+        // Check excess count1 and count2
+        if (count1 > count2) {
+            operations += count1 - count2; // Need to add more books to make count1 multiples of 3
+            count1 = count2; // After adjusting count1, it will match count2
+        } else if (count2 > count1) {
+            operations += count2 - count1; // Need to remove books to make count2 multiples of 3
+            count2 = count1; // After adjusting count2, it will match count1
+        }
+        
+        // Now count1 and count2 are equal, either 0 or 1
+        operations += count1 * 2; // Each count1 needs 2 operations to make it multiples of 3
         
         return operations;
     }
 }
+
 */
