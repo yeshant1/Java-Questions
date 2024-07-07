@@ -26,4 +26,46 @@ Sample Output 0
 7
 15
 6
+  /*import java.util.Scanner;
+
+public class EventProblemCounter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of test cases
+        int T = scanner.nextInt();
+
+        // Process each test case
+        for (int t = 0; t < T; t++) {
+            int n = scanner.nextInt();  // Number of problems in question bank
+            int m = scanner.nextInt();  // Number of rounds
+            scanner.nextLine();  // Consume newline
+            String problems = scanner.nextLine();
+
+            // Calculate the total problems needed for each rating (A to L)
+            int totalNeeded = 10 * m;
+
+            // Count occurrences of each character in the string
+            int[] charCount = new int[12];  // To count A to L
+            for (char ch : problems.toCharArray()) {
+                if (ch >= 'A' && ch <= 'L') {
+                    charCount[ch - 'A']++;
+                }
+            }
+
+            // Calculate extra problems needed
+            int extraNeeded = 0;
+            for (int count : charCount) {
+                if (count < m) {
+                    extraNeeded += (m - count);
+                }
+            }
+
+            System.out.println(extraNeeded);
+        }
+
+        scanner.close();
+    }
+}*/
   
