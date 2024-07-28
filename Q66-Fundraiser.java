@@ -22,4 +22,48 @@ Sample Output 0
 Bob
 Alice
 
+  /*import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class FundraiserGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();
+
+        while (T-- > 0) {
+            int goldCoins = scanner.nextInt();
+            int silverCoins = scanner.nextInt();
+
+            ArrayList<Integer> coins = new ArrayList<>();
+            for (int i = 0; i < goldCoins; i++) {
+                coins.add(75);
+            }
+            for (int i = 0; i < silverCoins; i++) {
+                coins.add(10);
+            }
+            Collections.sort(coins, Collections.reverseOrder());
+
+            boolean aliceTurn = true;
+            while (!coins.isEmpty()) {
+                int target = 115;
+                for (int i = 0; i < coins.size(); i++) {
+                    if (coins.get(i) <= target) {
+                        target -= coins.get(i);
+                        coins.remove(i);
+                        i--;
+                    }
+                }
+                if (target != 0) {
+                    aliceTurn = !aliceTurn;
+                    break;
+                }
+                aliceTurn = !aliceTurn;
+            }
+
+            System.out.println(aliceTurn ? "Alice" : "Bob");
+        }
+    }
+}*/
+
   
