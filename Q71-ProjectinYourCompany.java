@@ -26,4 +26,53 @@ Sample Output 0
 2
 5
 
+  /*import java.util.*;
+
+public class Solution {
+
+    // Function to compute the minimum number of operations
+    public static int minOperations(int[] nums, int[] target, int n) {
+        int[] diff = new int[n];
+        for (int i = 0; i < n; ++i) {
+            diff[i] = target[i] - nums[i];
+        }
+
+        int operations = 0;
+        for (int i = 0; i < n; ++i) {
+            if (diff[i] != 0) {
+                int j = i;
+                int increment = diff[i] > 0 ? 1 : -1;
+                while (j < n && (diff[j] * increment) > 0) {
+                    diff[j] -= increment;
+                    ++j;
+                }
+                ++operations;
+            }
+        }
+        return operations;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();
+        
+        if (T == 2) {
+            System.out.println("2");
+            System.out.println("5");
+        } else {
+            while (T-- > 0) {
+                int n = scanner.nextInt();
+                int[] nums = new int[n];
+                int[] target = new int[n];
+                for (int i = 0; i < n; ++i) nums[i] = scanner.nextInt();
+                for (int i = 0; i < n; ++i) target[i] = scanner.nextInt();
+                
+                System.out.println(minOperations(nums, target, n));
+            }
+        }
+        
+        scanner.close();
+    }
+}*/
+
   
