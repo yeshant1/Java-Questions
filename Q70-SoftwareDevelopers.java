@@ -22,4 +22,35 @@ Sample Output 0
 4
 0
 
-  /**/
+  /*import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of test cases
+        int t = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+
+        // Process each test case
+        while (t-- > 0) {
+            String s = scanner.nextLine();
+            int n = s.length();
+            int cnt = 0, ans = 0;
+
+            for (int i = 0; i < n; i++) {
+                if (s.charAt(i) == '0') {
+                    ans += cnt;
+                    while (i < n && s.charAt(i) != '1') {
+                        i++;
+                    }
+                }
+                cnt++;
+            }
+            System.out.println(ans);
+        }
+
+        scanner.close();
+    }
+}*/
